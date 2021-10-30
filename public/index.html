@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Webpack Project</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center text-info">Blog Management</h1>
+            <!-- form -->
+            <form class="mb-3">
+                <!-- title -->
+                <div class="mb-3">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="title"
+                        placeholder="Title"
+                    />
+                </div>
+
+                <!-- description -->
+                <div class="mb-3">
+                    <textarea
+                        id="description"
+                        class="form-control"
+                        placeholder="Description"
+                    ></textarea>
+                </div>
+
+                <!-- button -->
+                <button class="btn btn-primary" id="btn-add">Add</button>
+
+                <!-- button group -->
+                <div
+                    class="
+                        d-none d-flex
+                        flex-row
+                        justify-content-between
+                        align-items-center
+                    "
+                    id="btn-group"
+                >
+                    <button class="btn btn-dark" id="btn-back">Back</button>
+                    <button class="btn btn-info" id="btn-edit">Edit</button>
+                </div>
+            </form>
+
+            <!-- notification -->
+            <div id="notification"></div>
+
+            <!-- list -->
+            <h2 class="mb-3 text-center text-info">List</h2>
+            <div id="list">
+                <!-- <div
+                    class="
+                        mb-3
+                        p-2
+                        card
+                        d-flex
+                        flex-row
+                        justify-content-between
+                        align-items-center
+                    "
+                >
+                    <div>
+                        <p><strong>Title bla bla</strong></p>
+                        <p>Description bla bla</p>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-info btn-start-edit">
+                            Edit
+                        </button>
+                        <button class="btn btn-danger btn-remove">
+                            Remove
+                        </button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <noscript> You need to enable JavaScript to run this app </noscript>
+        <script src="../dist/bundle.js"></script>
+    </body>
+</html>
+<!-- 4 -->
+<!-- Babel
+- JS -> function cấp thấp để chạy đc trên tất cả trình duyệt
+- Mình có thể dùng babel thay thế webpack
+- webpack + babel => tuyệt đỉnh 
+    "@babel/core"                       lõi,thuật toán của babel
+    "@babel/plugin-transform-runtime"   giúp babel tác dùng đc trên asyn await
+    "@babel/preset-env"                 bộ cài đặt giúp biên dịch js thành cú pháp cũ hơn
+    "babel-loader"                      giúp tích hợp babel vào webpack
+    // npm: bền nhưng chậm
+    //npm i @babel/core @babel/plugin-transform-runtime @babel/preset-env babel-loader --save-dev
+    // yarn:
+    npm i @babel/core @babel/plugin-transform-runtime @babel/preset-env babel-loader --save-dev
+-->
+
+<!-- cài đặt style-loader file-loader 
+    "npm i css-loader file-loader sass sass-loader style-loader -D"
+    //-D tương ứng  –save-dev ám chỉ devDependencies
+    "css-loader"        giúp import css vào js
+    "file-loader"       giúp import css,image,video vào file js
+    "sass"              cú pháp khác của css
+    "sass-loader"       giúp import sass vào js
+    "style-loader"      giúp import css vào js 
+-->
+
+<!-- cài đặt webpack
+"npm i webpack webpack-cli webpack-dev-server -D"
+    "webpack"                   là phần lõi của webpack
+    "webpack-cli"               giúp ta gõ đc lệnh webpack trên terminal
+    "webpack-dev-server"        hỗ trợ tạo server localhost cho môi trường dev
+-->
+
+<!-- config lại webpack -->
+
+<!-- cài bootstrap -->
